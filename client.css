@@ -1,0 +1,354 @@
+/* client.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #1e293b;
+}
+
+body {
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 280px;
+  background: #8a3b06;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.sidebar-header {
+  padding: 1rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-header h1 {
+  color: #1e293b;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.sidebar-menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.menu-item {
+  padding: 1rem;
+  border: none;
+  background: none;
+  text-align: left;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1rem;
+}
+
+.menu-item:hover {
+  background: #6a2d05;
+  color: #ffffff;
+}
+
+.menu-item.active {
+  background: #eff6ff;
+  color: #b35900;
+  font-weight: 500;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background: #f8fafc;
+}
+
+.account-cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.account-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  color: #1e293b;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-family: 'Playfair Display' serif;
+}
+
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.btn {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-update {
+  background: #b35900;
+  color: #ffffff;
+}
+
+.btn-update:hover {
+  background: #8c5e6f;
+}
+
+.btn-logout {
+  background: #6a2d05;
+  color: white;
+}
+
+.btn-logout:hover {
+  background: #a87c8c;
+}
+
+.coming-soon {
+  text-align: center;
+  padding: 4rem;
+  color: #64748b;
+}
+
+.loan-application-section,
+.loan-repayment-section,
+.loan-tracking-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.loan-repayment-form,
+.loan-application-form {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #64748b;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 1rem;
+}
+
+.payment-method {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.payment-method.active {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.payment-method img {
+  width: 50px;
+  height: 50px;
+}
+
+.btn-submit {
+  background: #8a3b06;
+  color: white;
+}
+
+.btn-submit:hover {
+  background: #6a2d05;
+}
+
+.notifications-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.notifications-list {
+  list-style: none;
+  padding: 0;
+}
+
+.notification-item {
+  background: #f1f5f9;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.loan-details {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 500;
+  color: #64748b;
+}
+
+.detail-value {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+      flex-direction: column;
+  }
+
+  .sidebar {
+      width: 100%;
+      height: auto;
+  }
+
+  .main-content {
+      padding: 1.5rem;
+  }
+
+  .account-cards {
+      grid-template-columns: 1fr;
+  }
+
+  .payment-methods {
+      flex-direction: column;
+  }
+}
+
+/* Notifications Section Styles */
+.notifications-section {
+  padding: 20px;
+}
+
+.btn-load-notifications {
+  margin-bottom: 20px;
+  background-color: #8a3b06;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn-load-notifications:hover {
+  background-color: #6a2d05;
+}
+
+.btn-load-notifications:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.notifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-item {
+  padding: 15px;
+  background: white;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-left: 4px solid #8a3b06;
+  transition: transform 0.2s;
+}
+
+.notification-item:hover {
+  transform: translateX(5px);
+}

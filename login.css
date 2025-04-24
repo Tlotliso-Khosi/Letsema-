@@ -1,0 +1,116 @@
+/* src/css/login.css */
+
+.login-container {
+  background: rgba(255,255,255,0.6);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  animation: slideIn 0.5s ease;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #b35900;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --primary-color: #1B4D3E;
+  --secondary-color: #E8F3DC;
+  --text-color: #2C3E50;
+  --error-color: #E74C3C;
+}
+
+.body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('mok.jpg');
+  background-size: cover; 
+  padding: 2rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Unified button styles */
+.submit-button,
+.signup-button,
+.signup-button.client,
+.signup-button.business {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #8a3b06; /* Same as login button */
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover state for all buttons */
+.submit-button:hover:not(:disabled),
+.signup-button:hover:not(:disabled),
+.signup-button.client:hover:not(:disabled),
+.signup-button.business:hover:not(:disabled) {
+  background-color: #6a2d05; /* Darker shade for hover */
+}
+
+/* Disabled state for all buttons */
+.submit-button:disabled,
+.signup-button:disabled,
+.signup-button.client:disabled,
+.signup-button.business:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Container for both sign-up buttons */
+.signup-buttons-container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* Make sign-up buttons equal width */
+.signup-button.client,
+.signup-button.business {
+  flex: 1;
+}
